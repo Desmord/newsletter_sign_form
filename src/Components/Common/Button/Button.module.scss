@@ -1,0 +1,19 @@
+@import '../../../GlobalStyles/Settings.scss';
+
+.container {
+    @include font-body-bold;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: grid;
+    place-content: center;
+    color: $color-white;
+    background-color: $color-dark-navy;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        background-image: $color-gradient1;
+        filter: $effect3;
+    }
+}

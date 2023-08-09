@@ -1,0 +1,100 @@
+@import '../../../GlobalStyles/Settings.scss';
+
+$padding-bottom: 24px;
+$image-size: 21px;
+$image-padding-right: 16px;
+$image-bullets-gap: 10px;
+$elements-width:80%;
+$emailTexts-padding-top:40px;
+
+$input-border-radius:8px;
+$input-padding: 16px;
+$input-margin-top:8px;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $color-dark-navy;
+
+    .title {
+        @include font-heading;
+        padding-bottom: $padding-bottom;
+    }
+
+    .description {
+        @include font-body;
+        width: $elements-width;
+        padding-bottom: $padding-bottom;
+    }
+
+    .bullets {
+        @include font-body;
+        display: flex;
+        flex-direction: column;
+        gap: $image-bullets-gap;
+
+        span {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        img {
+            width: $image-size;
+            aspect-ratio: 1/1;
+            padding-right: $image-padding-right;
+        }
+    }
+
+    .emailTexts {
+        @include font-body-small;
+        width: $elements-width;
+        display: flex;
+        justify-content: space-between;
+        padding-top: $emailTexts-padding-top;
+
+        span:nth-of-type(2) {
+            color: $color-vermellion;
+        }
+    }
+
+    .input {
+        @include font-body;
+        width: calc($elements-width - ($input-padding * 2));
+        border-radius: $input-border-radius;
+        border: 1px solid $color-grey;
+        padding: $input-padding;
+        margin-top: $input-margin-top;
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid $color-dark-navy;
+
+            &::placeholder {
+                color: $color-dark-navy;
+                opacity: 1;
+            }
+        }
+
+        &::placeholder {
+            color: $color-grey;
+        }
+    }
+
+    .inputError {
+        background-color: $color-vermellion-light;
+        border: 1px solid $color-vermellion;
+
+        &::placeholder {
+            color: $color-vermellion;
+            opacity: 1;
+        }
+    }
+
+    .button {
+        width: $elements-width;
+        margin-top: 24px;
+    }
+}
