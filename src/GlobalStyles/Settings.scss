@@ -1,0 +1,34 @@
+$font-family: 'Roboto', sans-serif;
+
+$color-white: hsl(0, 0%, 100%);
+$color-grey: hsla(243, 28%, 13%,0.25);
+$color-pale-navy: hsl(235, 18%, 26%);
+$color-dark-navy: hsl(234, 29%, 20%);
+$color-vermellion: hsl(4, 100%, 67%);
+$color-gradient1: linear-gradient(#ff613a, #ff527b);
+
+$effect1: drop-shadow(0px 8px 0px hsla(0,0%,0%,1));
+$effect2: drop-shadow(0px 24px 32px hsla(0,0%,0%,0.1));
+
+@mixin font-heading {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+@mixin font-body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@mixin font-body-bold{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+@mixin font-body-small{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 150%;
+}
