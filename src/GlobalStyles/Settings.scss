@@ -35,3 +35,24 @@ $effect3: drop-shadow(0px 16px 32px hsla(4, 100%, 67%, 0.5));
     font-weight: 700;
     line-height: 150%;
 }
+
+@mixin phone-font-bold{
+    font-size: 40px;
+    line-height: 100%;
+}
+
+@mixin phone-font-body{
+    font-size: 16px;
+    line-height: 150%;
+}
+
+@mixin phone-font-body-small{
+    font-size: 12px;
+    line-height: 150%;
+}
+
+@mixin phone-font-body-bold{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+}

@@ -14,11 +14,12 @@ const Content = () => {
             </div>
             <div className={styles.emailTexts}>
                 <span>Email address</span>
-                <span>Valid email required</span>
+                {/* <span>Valid email required</span> */}
             </div>
             {/* {`${styles.input} ${styles.inputError}`} */}
             <input className={styles.input} placeholder='email@company.com'></input>
             <div className={styles.button}>
+                {/* sprawdzanie czy poprawny email */}
                 <Button text={`Subscribe to monthly newsletter`} />
             </div>
         </div>

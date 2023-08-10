@@ -11,6 +11,12 @@ $input-border-radius:8px;
 $input-padding: 16px;
 $input-margin-top:8px;
 
+$tablet-image-bullets-gap: 5px;
+$tablet-email-texts-padding-top: 20px;
+
+$phone-padding-bottom: 24px;
+$phone-elements-width:100%;
+
 .container {
     display: flex;
     justify-content: center;
@@ -94,7 +100,80 @@ $input-margin-top:8px;
     }
 
     .button {
-        width: $elements-width;
+        width: calc($elements-width - $input-padding);
         margin-top: 24px;
+        margin-left: -14px;
     }
+}
+
+
+@media all and (max-width: 908px) {
+
+    .container {
+
+        .title {
+            font-size: 30px;
+        }
+
+        .description {
+            line-height: 100%;
+        }
+
+        .bullets {
+            line-height: 100%;
+            gap: $tablet-image-bullets-gap;
+        }
+
+        .emailTexts {
+            line-height: 100%;
+            padding-top: $tablet-email-texts-padding-top;
+        }
+
+    }
+
+}
+
+@media all and (max-width: 688px) {
+
+    .container{
+        padding: 20px;
+
+        .title {
+            @include phone-font-bold;
+            align-self: flex-start;
+            padding-bottom: $phone-padding-bottom;
+        }
+    
+        .description {
+            @include phone-font-body;
+            align-self: flex-start;
+            width: $phone-elements-width;
+            padding-bottom: $padding-bottom;
+        }
+    
+        .bullets {
+            align-self: flex-start;
+            @include phone-font-body;
+        }
+    
+        .emailTexts {
+            @include phone-font-body-small;
+            width: calc($phone-elements-width - 24px);
+            margin-left: 10px;
+        }
+    
+        .input {
+            @include font-body;
+            width: calc($phone-elements-width - 48px);
+            margin-top: $input-margin-top;
+        }
+    
+        .button {
+            width: calc($phone-elements-width - 26px);
+            margin-left: -10px;
+            padding-left: 0px;
+        }
+    }
+
+   
 }
