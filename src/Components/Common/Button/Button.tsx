@@ -1,8 +1,14 @@
 import styles from './Button.module.scss'
 
-const Button = ({ text }: { text: string }) => {
+const Button = ({
+    text,
+    func,
+}: {
+    text: string,
+    func: Function
+}) => {
     return (
-        <div className={styles.container}>{text}</div>
+        <div onClick={() => func()} className={styles.container}>{text}</div>
     )
 }
 
