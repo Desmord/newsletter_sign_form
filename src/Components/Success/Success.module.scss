@@ -1,5 +1,47 @@
-.container{
-    width: 200px;
-    height: 200px;
-    background-color: red;
+@import '../../GlobalStyles/Settings.scss';
+
+$width: 500px;
+$phone-width: 320px;
+$radius: 36px;
+$padding: 64px;
+$img-size: 64px;
+$margin-top-big: 40px;
+$margin-top-small: 24px;
+$button-height: 40px;
+
+.container {
+    width: calc($width - ($padding * 2));
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    border-radius: $radius;
+    background-color: $color-white;
+
+    img {
+        width: $img-size;
+        aspect-ratio: 1/1;
+    }
+
+    .tittle {
+        @include font-heading;
+        margin-top: $margin-top-big;
+    }
+
+    .description {
+        @include font-body;
+        margin-top: $margin-top-small;
+    }
+
+    .button {
+        height: $button-height;
+        margin-top: $margin-top-big;
+    }
+}
+
+
+@media all and (max-width: 688px) {
+    .container {
+        width: $phone-width;
+    }
+
 }
